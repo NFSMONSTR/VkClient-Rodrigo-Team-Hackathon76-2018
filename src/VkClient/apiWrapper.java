@@ -38,8 +38,8 @@ public class apiWrapper {
             +"https://oauth.vk.com/blank.html&scope="+permissions+"&response_type=code&v=5.69",
             captchaUrl = "",
             redirectUrl = "https://oauth.vk.com/blank.html";
-    static Integer APP_ID = 6358323;
-    static String  CLIENT_SECRET = "xSg6beBIT7SFoIoX3RCj",
+    static Integer APP_ID = 0;// YOUR APP ID
+    static String  CLIENT_SECRET = "YOUR CLIENT_SECRET",
             REDIRECT_URI = "https://oauth.vk.com/blank.html",
             code = "code";
     public static UserActor currentUser = null;
