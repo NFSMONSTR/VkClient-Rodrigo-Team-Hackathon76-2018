@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabs" minWidth="1200.0" prefHeight="1024.0" prefWidth="1900.0" rotateGraphic="true" side="BOTTOM" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VkClient.YourPageController">
+   <tabs>
+      <Tab closable="false" style="-fx-background-color: #1565C0; -fx-color: red; -fx-font-size: 15px;" text="Профиль">
+         <content>
+            <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #E3F2FD;">
+               <children>
+                  <Region layoutX="12.0" layoutY="16.0" prefHeight="582.0" prefWidth="376.0" style="-fx-background-color: #BBDEFB; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-stroke: red; -fx-background-insets: 0 0.5 0 0.6; -fx-background-insets: 6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+                  <Region layoutX="388.0" layoutY="16.0" prefHeight="582.0" prefWidth="1494.0" style="-fx-background-color: #BBDEFB; -fx-stroke: #FCE4EC; -fx-stroke-width: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-insets: 6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="18.0" />
+                   <ImageView fx:id="Ava" fitHeight="343.0" fitWidth="343.0" layoutX="24.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="37.0" />
+                   <Label fx:id="PageName" layoutX="412.0" layoutY="37.0" prefHeight="40.0" prefWidth="723.0" textFill="#282525" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="37.0">
+                       <font>
+                           <Font name="Candara" size="24.0" />
+                       </font>
+                  </Label>
+                  <Label fx:id="LblStat" layoutX="419.0" layoutY="77.0" prefHeight="94.0" prefWidth="608.0" text="Статус:" wrapText="true" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="77.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="LblBornDate" layoutX="419.0" layoutY="168.0" prefHeight="16.0" prefWidth="845.0" text="Дата рождения:" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="168.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblCity" layoutX="419.0" layoutY="198.0" prefHeight="25.0" prefWidth="621.0" text="Город:" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="198.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label fx:id="lblHobbies" layoutX="419.0" layoutY="227.0" prefHeight="25.0" prefWidth="794.0" text="Увлечения:" wrapText="true" AnchorPane.leftAnchor="419.0" AnchorPane.topAnchor="227.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <HBox layoutX="399.0" layoutY="265.0" prefHeight="52.0" prefWidth="1457.0" AnchorPane.leftAnchor="399.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="290.0">
+                     <children>
+                        <Button fx:id="btnFriends" mnemonicParsing="false" prefHeight="58.0" prefWidth="370.0" style="-fx-background-color: #0288D1; -fx-background-radius: 7px;" text="Друзья: 0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnSubs" mnemonicParsing="false" prefHeight="58.0" prefWidth="370.0" style="-fx-background-color: #0288D1; -fx-background-radius: 7px;" text="Подписчики" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="bthPhotos" mnemonicParsing="false" prefHeight="58.0" prefWidth="370.0" style="-fx-background-color: #0288D1; -fx-background-radius: 7px;" text="Фотографии" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnGroups" mnemonicParsing="false" prefHeight="58.0" prefWidth="370.0" style="-fx-background-color: #0288D1; -fx-background-radius: 7px;" text="Группы" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></Button>
+                     </children>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="400.0" layoutY="351.0" prefHeight="130.0" prefWidth="850.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="351.0">
+                     <children>
+                        <ImageView fx:id="wallPhoto1" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" style="-fx-: 1;">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="wallPhoto2" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1;">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="wallPhoto3" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="wallPhoto4" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="wallPhoto5" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                        <ImageView fx:id="wallPhoto6" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                     </children></HBox>
+                  <TextArea fx:id="TANewZap" layoutX="415.0" layoutY="490.0" prefColumnCount="1" prefHeight="89.0" prefWidth="1311.0" promptText="Что у вас нового?" style="-fx-background-radius: 0px;" wrapText="true" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="490.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextArea>
+                  <Button fx:id="bthMkNewZap" layoutX="1064.0" layoutY="491.0" mnemonicParsing="false" onAction="#addNew" prefHeight="50.0" prefWidth="119.0" style="-fx-background-color: #03A9F4; -fx-background-radius: 10px;" text="Опубликовать" textFill="WHITE" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="491.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <!--<ImageView fx:id="wallPhoto1" fitHeight="130.0" fitWidth="130.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />-->
+                  <Label fx:id="onlineLabel" layoutX="29.0" layoutY="380.0" prefHeight="21.0" prefWidth="332.0" style="-fx-alignment: center;" text="• Онлайн" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Button fx:id="friendsButton" layoutX="29.0" layoutY="416.0" mnemonicParsing="false" onAction="#addFromFriendClick" prefHeight="41.0" prefWidth="164.0" style="-fx-background-color: #388E3C;" text="Добавить в друзья" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sendMessage" layoutX="205.0" layoutY="416.0" mnemonicParsing="false" onAction="#sendMessageClicked" prefHeight="41.0" prefWidth="167.0" style="-fx-background-color: #0288D1;" text="Написать сообщение" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backToMe" layoutX="29.0" layoutY="469.0" mnemonicParsing="false" onAction="#backToMeClicked" prefHeight="36.0" prefWidth="343.0" style="-fx-background-color: #4527A0;" text="Вернуться к себе" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteFromFriends" layoutX="29.0" layoutY="416.0" mnemonicParsing="false" onAction="#deleteFromFriendClick" prefHeight="41.0" prefWidth="164.0" style="-fx-background-color: #E64A19;" text="Убрать из друзей" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backToMe1" layoutX="29.0" layoutY="528.0" mnemonicParsing="false" onAction="#realoadPageClicked" prefHeight="36.0" prefWidth="343.0" style="-fx-background-color: #4527A0;" text="Обновить страницу" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" style="-fx-background-color: #0D47A1; -fx-color: red; -fx-font-size: 15;" text="Друзья">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <ListView fx:id="friendsList" layoutX="14.0" layoutY="72.0" onMouseClicked="#userSelectedEvent" prefHeight="903.0" prefWidth="1878.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" style="-fx-background-color: #4527A0; -fx-color: red; -fx-font-size: 15;" text="Сообщения">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;">
+               <children>
+                  <ListView fx:id="messagesListView" layoutX="256.0" layoutY="85.0" prefHeight="809.0" prefWidth="1511.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="85.0" />
+                  <ListView fx:id="dialogsList" layoutX="14.0" layoutY="11.0" onKeyPressed="#fuckKeys" onKeyReleased="#fuckKeys" onMouseClicked="#dialogListClicked" prefHeight="688.0" prefWidth="236.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
+                  <Region layoutX="256.0" layoutY="7.0" prefHeight="68.0" prefWidth="1636.0" style="-fx-background-color: #1976D2;" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="8.0" />
+                  <TextArea fx:id="message" layoutX="266.0" layoutY="605.0" prefHeight="62.0" prefWidth="1502.0" promptText="Напишите сообщение..." style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-insets: 0; -fx-background-color: transparent, white, transparent, white; -fx-background-radius: 7px;" wrapText="true" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="132.0" />
+                  <Button layoutX="1781.0" layoutY="880.0" mnemonicParsing="false" onAction="#sendMessageClick" prefHeight="49.0" prefWidth="110.0" style="-fx-background-radius: 27px; -fx-background-color: #5E35B1;" text="Отправить" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="8.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Button>
+                  <ImageView fx:id="chatAva" fitHeight="50.0" fitWidth="50.0" layoutX="266.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="chatName" layoutX="326.0" layoutY="27.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" style="-fx-background-color: #311B92; -fx-color: red; -fx-font-size: 15;" text="Новости">
+        <content>
+          <AnchorPane fx:id="postsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <!--<children>
+                  <VirtualFlow fx:id="postsList" layoutX="14.0" layoutY="14.0" pickOnBounds="false" prefHeight="698.0" prefWidth="1256.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+               </children>-->
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" style="-fx-background-color: #311B92; -fx-color: red; -fx-font-size: 15;" text="Настройки">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="1872.0" style="-fx-background-color: #C62828;" text="Выход" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="14.0" layoutY="132.0" prefHeight="850.0" prefWidth="1892.0" style="-fx-alignment: center;" text="О приложении: VK Client by RoDrIgO team, (C)2018 , All Rights Reserved, Hackathon Version" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="132.0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" style="-fx-background-color: #880E4F; -fx-color: red; -fx-font-size: 15;" text="Поиск">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <TextField fx:id="searchQ" layoutX="12.0" layoutY="27.0" prefHeight="31.0" prefWidth="1799.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="27.0" />
+                  <Button layoutX="1820.0" layoutY="27.0" mnemonicParsing="false" onAction="#goSearchFriends" style="-fx-background-color: #7B1FA2;" text="Найти" textFill="WHITE" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="27.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <ListView fx:id="searchList" layoutX="14.0" layoutY="72.0" onMouseClicked="#userSelectedEvent" prefHeight="903.0" prefWidth="1878.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="72.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
